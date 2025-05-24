@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rulet9</title>
+    <meta name="google" content="notranslate" />
+    <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      {% set blocks = [
+        'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh'
+      ] %}
+
+      {% for block in blocks %}
+        <aside class="block {{ block }}-block">
+          {% for i in range(1, 5) %}
+            <section class="rectangle rectangle-{{ i }}">
+              {% for j in range(4) %}
+                <div class="side"></div>
+              {% endfor %}
+            </section>
+          {% endfor %}
+        </aside>
+      {% endfor %}
+    </div>
+  </body>
+</html>
